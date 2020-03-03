@@ -1,11 +1,11 @@
 <template>
-  <div :class="['dm5-inline-edit', mode]">
+  <div :class="['dm5-inline-edit', mode, {disabled}]">
     <slot name="info" v-if="infoMode"></slot>
-    <slot name="form" v-else></slot>
+    <slot name="form" v-if="formMode"></slot>
     <!-- Edit Button -->
-    <el-button class="edit fa fa-pencil" v-if="showEdit" type="text" @click="edit"></el-button>
+    <el-button class="edit fa fa-pencil" v-if="infoMode" type="text" @click="edit"></el-button>
     <!-- Save Button -->
-    <el-button class="save-button" v-if="showSave" @click.stop="save">Save</el-button>
+    <el-button class="save-button" v-if="formMode" @click.stop="save">Save</el-button>
   </div>
 </template>
 
@@ -16,21 +16,13 @@ export default {
     require('./mixins/info-mode').default
   ],
 
-  data () {
-    return {
-      mode: 'info'    // 'info' or 'form'
-    }
+  props: {
+    disabled: Boolean     // is inline edit disabled?
   },
 
-  computed: {
-
-    showEdit () {
-      // inline editing can only be started in info mode
-      return this.infoMode    // && this.editable
-    },
-
-    showSave () {
-      return this.formMode
+  data () {
+    return {
+      mode: 'info'        // 'info' or 'form'
     }
   },
 
@@ -51,6 +43,10 @@ export default {
 <style>
 .dm5-inline-edit {
   position: relative;     /* for absolute positioned "edit" button */
+}
+
+.dm5-inline-edit.disabled {
+  pointer-events: none;
 }
 
 .dm5-inline-edit.info:hover {
