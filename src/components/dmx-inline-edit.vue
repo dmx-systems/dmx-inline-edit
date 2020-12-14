@@ -1,5 +1,5 @@
 <template>
-  <div :class="['dm5-inline-edit', mode, {disabled}]">
+  <div :class="['dmx-inline-edit', mode, {disabled}]">
     <slot name="info" v-if="infoMode"></slot>
     <slot name="form" v-if="formMode"></slot>
     <!-- Edit Button -->
@@ -41,21 +41,21 @@ export default {
 </script>
 
 <style>
-.dm5-inline-edit {
+.dmx-inline-edit {
   position: relative;     /* for absolute positioned "edit" button */
 }
 
-.dm5-inline-edit.disabled {
+.dmx-inline-edit.disabled {
   pointer-events: none;
 }
 
-.dm5-inline-edit.info:hover {
+.dmx-inline-edit.info:hover {
   background-color: white;
 }
 
 /* Edit Button */
 
-.dm5-inline-edit button.edit {
+.dmx-inline-edit button.edit {
   position: absolute;
   bottom: 0;
   right: -12px;
@@ -63,7 +63,7 @@ export default {
   padding: 0 !important;
 }
 
-.dm5-inline-edit:hover button.edit {
+.dmx-inline-edit:hover button.edit {
   visibility: visible;
 }
 </style>
