@@ -58,8 +58,9 @@ export default {
 .dmx-inline-edit button.edit {
   position: absolute;
   bottom: 0;
-  right: -12px;
+  right: -18px;
   visibility: hidden;
+  font-size: 16px !important;
   padding: 0 !important;
 }
 
