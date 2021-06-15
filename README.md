@@ -2,6 +2,11 @@
 
 ## Version History
 
+**2.0.1** -- Jun 15, 2021
+
+* Improvement:
+    * Bigger Edit button
+
 **2.0** -- Dec 30, 2020
 
 * BREAKING CHANGES
@@ -16,7 +21,3 @@
 * Chore: rename this package `dm5-inline-edit` -> `dmx-inline-edit`
 
 **0.1** -- Mar 9, 2020
-
-------------
-Jörg Richter  
-Dec 30, 2020

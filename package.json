@@ -1,6 +1,6 @@
 {
   "name": "dmx-inline-edit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A reusable inline edit component for the DMX platform",
   "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "AGPL-3.0",
