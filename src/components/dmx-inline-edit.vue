@@ -3,7 +3,7 @@
     <slot name="info" v-if="infoMode"></slot>
     <slot name="form" v-if="formMode"></slot>
     <!-- Edit Button -->
-    <el-button class="edit fa fa-pencil" v-if="infoMode" type="text" @click="edit"></el-button>
+    <el-button class="edit fa fa-pencil" v-if="infoMode" type="primary" link @click="edit"></el-button>
     <!-- Save Button -->
     <el-button class="save-button" v-if="formMode" @click.stop="save">Save</el-button>
   </div>
